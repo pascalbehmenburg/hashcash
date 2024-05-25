@@ -1,0 +1,15 @@
+[package]
+name = "hashcash"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+base64 = "0.22.1"
+chrono = { version = "0.4.38" }
+rand = "0.8.5"
+sha1_smol = { version = "1.0.0", features = ["std"] }
+
+[profile.dev.package."*"]
+codegen-units = 1
+opt-level = 3
